@@ -52,7 +52,7 @@ header.nav{
 .brand .dot{width:26px;height:26px;border-radius:50%;
   background:linear-gradient(160deg,var(--gold-soft),var(--gold));flex:none;
   box-shadow:inset 0 0 0 3px rgba(255,255,255,.4)}
-.brand .logo-icon{width:36px;height:36px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px rgba(255,255,255,.6),0 4px 12px -4px rgba(0,0,0,.35)}
+.brand .logo-icon{width:36px;height:36px;border-radius:50%;object-fit:contain;background:#fff;flex:none;box-shadow:0 0 0 2px rgba(255,255,255,.6),0 4px 12px -4px rgba(0,0,0,.35)}
 .langtoggle{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-weight:700;font-size:13px}
 .langtoggle button{border:0;background:transparent;color:var(--ink-soft);padding:7px 15px;cursor:pointer;font-family:inherit;font-weight:700;transition:.2s}
 .langtoggle button.active{background:var(--forest);color:#f6f2ea}
@@ -83,7 +83,7 @@ h2{font-size:clamp(2rem,4vw,3rem)}
 .split.rev .txt{order:2}
 @media(max-width:820px){.split{grid-template-columns:1fr;gap:32px}.split.rev .txt{order:0}}
 .figure{border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}
-.figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}.intro{padding:76px 0 8px;text-align:center}.intro-lead{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.35rem,2.6vw,1.95rem);max-width:820px;margin:0 auto;color:var(--forest);line-height:1.25}.intro-note{margin:24px auto 0;max-width:48ch;color:var(--ink-soft);font-size:1.08rem}.intro-note b{color:var(--gold);font-weight:800}.video-frame{position:relative;max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}footer{background:var(--forest)!important;padding:0!important;line-height:normal!important}.foot-flag{height:14px;background:linear-gradient(90deg,#4a86c9 0 50%,#e5b83c 50% 100%)}.foot-in{display:flex;flex-direction:column;align-items:center;gap:14px;padding:52px 20px 46px;text-align:center}.foot-emblem{width:78px;height:78px;border-radius:50%;box-shadow:0 0 0 3px rgba(255,255,255,.16)}.foot-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#f2ede2}.foot-sub{font-size:12.5px;letter-spacing:.5px;color:rgba(242,237,226,.7)}.foot-social{display:flex;gap:14px;margin-top:16px}.foot-social a{display:inline-flex;align-items:center;gap:8px;color:#f2ede2;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.3px;border:1px solid rgba(242,237,226,.32);border-radius:999px;padding:9px 18px;transition:.2s}.foot-social a:hover{background:rgba(242,237,226,.12);border-color:rgba(242,237,226,.65)}.foot-social svg{width:16px;height:16px;fill:currentColor}
+.figure img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}.intro{padding:76px 0 8px;text-align:center}.intro-lead{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(1.35rem,2.6vw,1.95rem);max-width:820px;margin:0 auto;color:var(--forest);line-height:1.25}.intro-note{margin:24px auto 0;max-width:48ch;color:var(--ink-soft);font-size:1.08rem}.intro-note b{color:var(--gold);font-weight:800}.video-frame{position:relative;max-width:900px;margin:0 auto;aspect-ratio:16/9;border-radius:18px;overflow:hidden;box-shadow:var(--shadow)}.video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}.reels{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;align-items:flex-start}.reels .instagram-media{margin:0!important;min-width:300px;max-width:340px}footer{background:var(--forest)!important;padding:0!important;line-height:normal!important}.foot-flag{height:14px;background:linear-gradient(90deg,#4a86c9 0 50%,#e5b83c 50% 100%)}.foot-in{display:flex;flex-direction:column;align-items:center;gap:14px;padding:52px 20px 46px;text-align:center}.foot-emblem{width:80px;height:80px;border-radius:50%;background:#fff;object-fit:contain;padding:7px;box-shadow:0 0 0 3px rgba(255,255,255,.18)}.foot-name{font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#f2ede2}.foot-sub{font-size:12.5px;letter-spacing:.5px;color:rgba(242,237,226,.7)}.foot-social{display:flex;gap:14px;margin-top:16px}.foot-social a{display:inline-flex;align-items:center;gap:8px;color:#f2ede2;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.3px;border:1px solid rgba(242,237,226,.32);border-radius:999px;padding:9px 18px;transition:.2s}.foot-social a:hover{background:rgba(242,237,226,.12);border-color:rgba(242,237,226,.65)}.foot-social svg{width:16px;height:16px;fill:currentColor}
 
 /* STATS band */
 .band{background:var(--forest);color:#f2ede2}
@@ -160,7 +160,7 @@ footer small{display:block;margin-top:14px;font-size:12.5px;opacity:.7}
 
 <header class="nav">
   <div class="wrap nav-in">
-    <div class="brand"><img class="logo-icon" src="logo_icon.jpg" alt="Людині потрібна людина">
+    <div class="brand"><img class="logo-icon" src="logo_new.png" alt="Людині потрібна людина">
       <span lang-uk>Людині потрібна людина</span><span lang-en>A Person Needs a Person</span>
     </div>
     <div class="langtoggle" role="group" aria-label="Language">
@@ -389,6 +389,7 @@ footer small{display:block;margin-top:14px;font-size:12.5px;opacity:.7}
 </section>
 
 <section lang-en style="padding-top:0"><div class="wrap"><div class="tag reveal">Watch their story</div><h2 class="reveal" style="margin-bottom:26px">A story of healing and transformation</h2><div class="video-frame reveal"><iframe src="https://www.youtube.com/embed/EIzQ3pLIH2E" title="Reboot Retreat" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="tag reveal"><span lang-uk>Відео з ретриту</span><span lang-en>Videos from the retreat</span></div><h2 class="reveal" style="margin-bottom:28px"><span lang-uk>Подивіться, як це було</span><span lang-en>See how it was</span></h2><div class="reels reveal"><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DXHLrzvDffs/" data-instgrm-version="14"></blockquote><blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DYFOnTmNUq2/" data-instgrm-version="14"></blockquote></div></div></section>
 <!-- FUTURE -->
 <section style="padding-top:0">
   <div class="wrap">
@@ -415,7 +416,7 @@ footer small{display:block;margin-top:14px;font-size:12.5px;opacity:.7}
   </div>
 </section>
 
-<footer><div class="foot-flag"></div><div class="foot-in"><img class="foot-emblem" src="logo_icon.jpg" alt="Людині потрібна людина"><div class="foot-name">Людині потрібна людина</div><div class="foot-sub"><span lang-uk>Команда проєкту «Перезавантаження»</span><span lang-en>The «Reboot» Project Team</span></div><div class="foot-social"><a href="https://www.instagram.com/lyudyni.potribna.lyudyna" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 2.76a7.08 7.08 0 1 0 0 14.16 7.08 7.08 0 0 0 0-14.16Zm0 1.62a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm5.65-.32a1.28 1.28 0 1 1 0 2.56 1.28 1.28 0 0 1 0-2.56Z"/></svg>Instagram</a><a href="https://www.facebook.com/share/1DBNYvy9gy/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>Facebook</a></div></div></footer>
+<footer><div class="foot-flag"></div><div class="foot-in"><img class="foot-emblem" src="logo_new.png" alt="Людині потрібна людина"><div class="foot-name">Людині потрібна людина</div><div class="foot-sub"><span lang-uk>Команда проєкту «Перезавантаження»</span><span lang-en>The «Reboot» Project Team</span></div><div class="foot-social"><a href="https://www.instagram.com/lyudyni.potribna.lyudyna" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 2.76a7.08 7.08 0 1 0 0 14.16 7.08 7.08 0 0 0 0-14.16Zm0 1.62a5.46 5.46 0 1 1 0 10.92 5.46 5.46 0 0 1 0-10.92Zm5.65-.32a1.28 1.28 0 1 1 0 2.56 1.28 1.28 0 0 1 0-2.56Z"/></svg>Instagram</a><a href="https://www.facebook.com/share/1DBNYvy9gy/?mibextid=wwXIfr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>Facebook</a></div></div></footer>
 
 <div class="lb" id="lb" onclick="this.classList.remove('open')"><img src="" alt=""></div>
 
@@ -436,5 +437,6 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.t
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})},1800);
 </script>
+<script async src="//www.instagram.com/embed.js"></script>
 </body>
 </html>
