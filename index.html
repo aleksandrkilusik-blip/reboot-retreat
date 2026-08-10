@@ -440,5 +440,54 @@ const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.t
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})},1800);
 </script>
+
+<style>
+.pay-card{cursor:pointer;position:relative;transition:transform .15s ease, box-shadow .15s ease;}
+.pay-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);}
+.pay-card:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+.pay-hint{display:block;margin-top:6px;font-size:.72em;letter-spacing:.02em;opacity:.55;}
+.pay-copied{display:block;margin-top:4px;font-size:.78em;font-weight:600;color:var(--gold);opacity:0;transition:opacity .2s ease;}
+.pay-card.copied .pay-copied{opacity:1;}
+</style>
+<script>
+(function(){
+  function build(){
+    var cards = document.querySelectorAll('.pay .pay-card');
+    if(!cards.length) return;
+    cards.forEach(function(card){
+      if(card.dataset.payReady) return; card.dataset.payReady='1';
+      var val = card.querySelector('.pay-val'); if(!val) return;
+      var labelEl = card.querySelector('.pay-label');
+      var labelTxt = labelEl ? labelEl.textContent : '';
+      var raw = val.textContent.trim();
+      var isPaypal = /paypal/i.test(labelTxt) || raw.indexOf('@') > -1;
+      card.setAttribute('role','button');
+      card.setAttribute('tabindex','0');
+      var hint = document.createElement('span'); hint.className='pay-hint';
+      if(isPaypal){
+        hint.innerHTML='<span lang-uk>Відкрити PayPal →</span><span lang-en>Open PayPal →</span>';
+        card.appendChild(hint);
+        var url='https://www.paypal.com/donate/?business='+encodeURIComponent(raw)+'&item_name='+encodeURIComponent('Reboot Retreat');
+        var go=function(){ window.open(url,'_blank','noopener'); };
+        card.addEventListener('click',go);
+        card.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); go(); }});
+      } else {
+        hint.innerHTML='<span lang-uk>Натисніть, щоб скопіювати</span><span lang-en>Click to copy</span>';
+        card.appendChild(hint);
+        var done=document.createElement('span'); done.className='pay-copied';
+        done.innerHTML='<span lang-uk>Скопійовано ✓</span><span lang-en>Copied ✓</span>';
+        card.appendChild(done);
+        var digits=raw.replace(/\s+/g,'');
+        var flash=function(){ card.classList.add('copied'); clearTimeout(card._t); card._t=setTimeout(function(){ card.classList.remove('copied'); },1600); };
+        var legacy=function(){ var t=document.createElement('textarea'); t.value=digits; t.style.position='fixed'; t.style.opacity='0'; document.body.appendChild(t); t.focus(); t.select(); try{document.execCommand('copy');}catch(e){} t.remove(); };
+        var copy=function(){ var p=null; try{ p=navigator.clipboard.writeText(digits); }catch(e){} if(p&&p.then){ p.then(flash,function(){ legacy(); flash(); }); } else { legacy(); flash(); } };
+        card.addEventListener('click',copy);
+        card.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); copy(); }});
+      }
+    });
+  }
+  if(document.readyState==='loading'){ document.addEventListener('DOMContentLoaded',build); } else { build(); }
+})();
+</script>
 </body>
 </html>
